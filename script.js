@@ -3,7 +3,7 @@ function sbtclick(){
     price = Math.round(price * 100) / 100;
     let vend_charges = ((5.1/100)*price)+0.99;
     vend_charges = Math.round(vend_charges*100)/100;
-    let vat = vend_charges * 1.24;
+    let vat = vend_charges * 0.24;
     vat = Math.round(vat*100)/100;
     let earnings = price - (vend_charges + vat);
     earnings = Math.round(earnings*100) /100;
