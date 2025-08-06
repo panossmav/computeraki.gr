@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Υπολογισμός θερμίδων - Computeraki.com</title>
+    <link rel="stylesheet" href="/assets/styles/pages/ideal-calories.css">
+</head>
+<body>
+    <h1 id="intro-h1">Υπολογισμός θερμίδων</h1>
+    <label><input type="radio" name="gender" value="Male">Άνδρας</label>
+    <label><input type="radio" name="gender" value="Female">Γυναίκα</label>
+    <p>Ηλικία</p>
+    <input type="number" id="age-input">
+    <p>Βάρος σε kg</p>
+    <input type="number" id="weight-input" step="0.5">
+    <p>Ύψος σε cm</p>
+    <input type="number" id="height-input"><br>
+    <button onclick="find_calories()">Υπολογισμός</button>
+    <p id="result"></p>
+    <p id="error"></p>
+
+    <script src="/assets/scripts/ideal-calories.js" defer></script>
+</body>
+</html>
