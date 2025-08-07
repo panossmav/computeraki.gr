@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Πράξεις με ΦΠΑ | Computeraki.gr</title>
+    <link rel="stylesheet" href="/assets/styles/pages/vat.css">
+</head>
+<body>
+    <h1 id="intro-h1">Υπολογισμός ΦΠΑ</h1>
+    <label><input type="radio" name="calculations" value="-">Αφαίρεση ΦΠΑ από ποσό</label>
+    <label><input type="radio" name="calculations" value="+" checked>Προσθήκη ΦΠΑ σε ποσό</label><br>
+    <label>Τιμή:<input type="number" id="price-input">€.</label><br>
+    <label>ΦΠΑ: <input type="number" id="vat-input" min="0" max="100" value="24">%</label><br>
+    <button id="sbt-btn" onclick="calculateVAT()">Υπολογισμός!</button>
+    <p id="result"></p>
+
+<script src="/assets/scripts/vat.js" defer></script>
+</body>
+</html>
