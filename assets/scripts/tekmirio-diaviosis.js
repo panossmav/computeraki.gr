@@ -3,13 +3,17 @@ function Calculate(){
     const first_home = CalculateFirstHome()
     const second_homes = CalculateSecondaryHomes()
     const vehicles = CalculateVehicles()
+    let private_schools = document.getElementById("private-school-input").value;
+    if (private_schools == null){
+        private_schools = 0;
+    }
     //Final function pending calculations
     
 }
 function CalculateFirstHome(){
     let area = document.getElementById("main-property-size").value;
     area = Math.round(area);
-    let final_price = null;
+    let final_price = 0;
     if (area<=80){
         final_price = 40*area;
     } else if (area<=120){

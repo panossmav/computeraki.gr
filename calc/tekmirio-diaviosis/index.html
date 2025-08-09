@@ -5,12 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Υπολογισμός Γενικού τεκμηρίου διαβίωσης | Computeraki.gr</title>
     <link rel="stylesheet" href="/assets/styles/pages/tekmirio-diaviosis.css">
+    <link rel="stylesheet" href="/assets/styles/elements/header.css">
 </head>
 <body>
+    <header class="site-header">
+  <div class="brand">Computeraki.gr</div>
+  <nav class="nav" aria-label="Κύρια πλοήγηση">
+    <a href="/index.html">Αρχική</a>
+    <a href="#about">Σχετικά</a>
+    <a href="https://github.com/panossmav/computeraki.gr" target="_blank" rel="noopener">GitHub</a>
+  </nav>
+</header>
+
     <h1 id="intro-h1">Υπολογισμός Γενικού Τεκμηρίου Διαβίωσης</h1>
     <div class="properties">
         <div class="main-property">
             <h2 id="intro-main-prop">1. Κύρια κατοικία</h2>
+            <p class="optional" id="optional-secondary-properties">Αφήστε κενό αν δεν υπάρχει</p>
             <label id="main-property-size-l">Εμβαδόν (τ.μ.): <input type='number' id="main-property-size"></label>
         </div>
         <div class="secondary-properties">
@@ -22,12 +33,17 @@
             </div>
         </div>
         <div class="vehicles">
-            <h2 id="vehicles">3. Οχήματα (ΙΧ)</h2>
+            <h2 id="vehicles-label">3. Οχήματα (ΙΧ)</h2>
             <p class="optional" id="optional-vehicle">Αφήστε κενό αν δεν υπάρχουν</p>
             <button onclick="CreateVehicle()">Προσθήκη οχήματος</button>
             <div id='added_vehicles'>
 
             </div>
+        </div>
+        <div class="private-schools">
+            <h2 id="private-schools-label">4. Ιδιωτικά σχολεία</h2>
+            <p class="optional" id="optional-secondary-properties">Αφήστε κενό αν δεν υπάρχουν</p>
+            <label>Συνολικό <b>ετήσιο</b> κόστος ιδιωτικών σχολείων: <input type="number" id="private-school-input"></label>
         </div>
     </div>
 
