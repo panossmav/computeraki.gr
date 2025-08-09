@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Υπολογισμός Γενικού τεκμηρίου διαβίωσης | Computeraki.gr</title>
+    <link rel="stylesheet" href="/assets/styles/pages/tekmirio-diaviosis.css">
+</head>
+<body>
+    <h1 id="intro-h1">Υπολογισμός Γενικού Τεκμηρίου Διαβίωσης</h1>
+    <div class="properties">
+        <div class="main-property">
+            <h2 id="intro-main-prop">1. Κύρια κατοικία</h2>
+            <label id="main-property-size-l">Εμβαδόν (τ.μ.): <input type='number' id="main-property-size"></label>
+        </div>
+        <div class="secondary-properties">
+            <h2>2. Δευτερεύουσες κατοικίες</h2>
+            <p class="optional" id="optional-secondary-properties">Αφήστε κενό αν δεν υπάρχουν</p>
+            <button onclick="CreateSecondaryHome()">Προσθήκη δευτερεύουσας κατοικίας</button>
+            <div id="sec_homes">
+
+            </div>
+        </div>
+        <div class="vehicles">
+            <h2 id="vehicles">3. Οχήματα (ΙΧ)</h2>
+            <p class="optional" id="optional-vehicle">Αφήστε κενό αν δεν υπάρχουν</p>
+            <button onclick="CreateVehicle()">Προσθήκη οχήματος</button>
+            <div id='added_vehicles'>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="/assets/scripts/tekmirio-diaviosis.js" defer></script>
+</body>
+</html>

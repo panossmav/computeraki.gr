@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&display=swap');
+
+body{
+    background-color: rgb(141,141,117);
+    font-family: "Comic Relief",system-ui;
+    text-align: center;
+}
+
+#new_home{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+#vehicle_cc_div,
+#vehicle_year_div{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.optional{
+    font-size: smaller;
+    margin:0;
+    color:red;
+}
