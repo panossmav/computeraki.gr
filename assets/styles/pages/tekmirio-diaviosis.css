@@ -14,7 +14,9 @@ body{
 }
 
 #vehicle_cc_div,
-#vehicle_year_div{
+#vehicle_year_div,
+#new_worker_div,
+#new_boat_div{
     display:flex;
     align-items: center;
     justify-content: center;
@@ -24,4 +26,9 @@ body{
     font-size: smaller;
     margin:0;
     color:red;
+}
+
+#res{
+    color:green;
+    font-weight: bolder;
 }

@@ -45,7 +45,31 @@
             <p class="optional" id="optional-secondary-properties">Αφήστε κενό αν δεν υπάρχουν</p>
             <label>Συνολικό <b>ετήσιο</b> κόστος ιδιωτικών σχολείων: <input type="number" id="private-school-input"></label>
         </div>
+        <div class="workers">
+            <h2 id="workers-label">5. Οικιακοί βοηθοί / Οδηγοί / Φροντιστές</h2>
+            <p class="optional" id="optional-secondary-properties">Αφήστε κενό αν δεν υπάρχουν</p>
+            <button onclick="CreateWorker()">Προσθήκη εργαζομένου</button>
+            <div id="added_workers">
+
+            </div>
+        </div>
+        <div class="boats">
+            <h2>6. Σκάφη αναψυχής</h2>
+            <p class="optional" id="optional-secondary-properties">Αφήστε κενό αν δεν υπάρχουν</p>
+            <button onclick="CreateBoat()">Προσθήκη Σκάφους αναψυχής</button>
+            <div id="added_boats">
+
+            </div>
+        </div>
+
+        <div class="gender">
+            <h2>Οικογενιακή κατάσταση</h2>
+            <label>Άγγαμος/η <input type="radio" name="family" checked></label>
+            <label>Έγγαμος/η <input type="radio" name="family"></label>
+        </div>
     </div>
+    <button onclick="Calculate()">Υπολογισμός</button>
+    <p id="res"></p>
 
     <script src="/assets/scripts/tekmirio-diaviosis.js" defer></script>
 </body>
