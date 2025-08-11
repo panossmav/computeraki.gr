@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Υπολογισμός κόστους ταξιδιού | Computeraki.gr</title>
+    <link rel="stylesheet" href="/assets/styles/elements/header.css">
+    <link rel="stylesheet" href="/assets/styles/pages/trip-calculator.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="brand">Computeraki.gr</div>
+  <nav class="nav" aria-label="Κύρια πλοήγηση">
+    <a href="/index.html">Αρχική</a>
+    <a href="https://github.com/panossmav/computeraki.gr" target="_blank" rel="noopener">GitHub</a>
+  </nav>
+</header>
+<h1>Υπολογισμός κόστους ταξιδιού</h1>
+
+<label id="km">Εισάγετε την απόσταση (km): <input type="number" min="0" id="km_input"></label><br>
+<label id="cons">Εισάγετε την μέση κατανάλωση του οχήματος σας (l/100km): <input id="avg_consumption_input" type="number" min="0"></label><br>
+<label id="price">Εισάγετε την μέση τιμή του καύσιμου σας (€/lt): <input type="number" min="0" id="fuel_price_input"></label><br>
+
+<button onclick="CalculateTrip()">Υπολογισμός!</button>
+
+<p id="res"></p>
+
+
+
+<script src="/assets/scripts/trip-calculator.js" defer></script>
+</body>
+</html>

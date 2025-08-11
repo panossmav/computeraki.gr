@@ -1,0 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&display=swap');
+
+body{
+    background-color: rgb(141,141,117);
+    font-family: "Comic Relief",system-ui;
+    text-align: center;
+}
