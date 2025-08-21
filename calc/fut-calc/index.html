@@ -1,192 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>FUT Rating Calculator</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #111;
-            color: #f2f2f2;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-        .container {
-            background: #222;
-            padding: 20px 30px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 15px rgba(0,0,0,0.6);
-            width: 420px;
-            max-height: 90vh;
-            overflow-y: auto;
-        }
-        h2 {
-            text-align: center;
-            color: #ffd700;
-        }
-        label {
-            display: block;
-            margin-top: 10px;
-        }
-        input, select {
-            width: 100%;
-            padding: 8px;
-            margin-top: 5px;
-            border-radius: 5px;
-            border: none;
-        }
-        button {
-            margin-top: 15px;
-            width: 100%;
-            padding: 10px;
-            background: #ffd700;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-        button:hover {
-            background: #e6c200;
-        }
-        .results {
-            margin-top: 20px;
-            background: #333;
-            padding: 15px;
-            border-radius: 8px;
-            text-align: center;
-        }
-        .results h3 {
-            margin-bottom: 10px;
-            color: #00ff88;
-        }
-        .stats {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 10px;
-            font-size: 16px;
-            font-weight: bold;
-        }
-        .stats div {
-            background: #444;
-            padding: 8px;
-            border-radius: 5px;
-        }
-        .ovr {
-            margin-top: 15px;
-            font-size: 20px;
-            font-weight: bold;
-            color: #ffd700;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h2>FUT Rating Calculator</h2>
+<label>Acceleration (sec)</label>
+<input type="number" id="acc" step="0.1">
 
-        <label>Position</label>
-        <select id="pos">
-            <option value="Forward">Forward</option>
-            <option value="Mid">Mid</option>
-            <option value="Def">Def</option>
-            <option value="GK">GK</option>
-        </select>
+<label>Speed (m/s)</label>
+<input type="number" id="spd" step="0.1">
 
-        <label>Acceleration</label>
-        <input type="number" id="acc" step="0.1">
+<label>Shooting (Finishing 0–10)</label>
+<input type="number" id="fin">
 
-        <label>Speed</label>
-        <input type="number" id="spd" step="0.1">
+<label>Shooting (Long Shot 0–10)</label>
+<input type="number" id="long">
 
-        <label>Shooting (Finishing)</label>
-        <input type="number" id="fin">
+<label>Shooting (Volley 0–10)</label>
+<input type="number" id="voll">
 
-        <label>Shooting (Long Shot)</label>
-        <input type="number" id="long">
+<label>Shooting (Penalty 0–10)</label>
+<input type="number" id="pen">
 
-        <label>Shooting (Volley)</label>
-        <input type="number" id="voll">
+<label>Shooting (Shot Power 0–100)</label>
+<input type="number" id="sp">
 
-        <label>Shooting (Penalty)</label>
-        <input type="number" id="pen">
+<label>Agility (0–10)</label>
+<input type="number" id="ag">
 
-        <label>Shooting (Shot Power)</label>
-        <input type="number" id="sp">
+<label>Reactions (sec)</label>
+<input type="number" id="rc" step="0.1">
 
-        <label>Agility</label>
-        <input type="number" id="ag">
+<label>Ball Control (0–20)</label>
+<input type="number" id="bc">
 
-        <label>Reactions</label>
-        <input type="number" id="rc" step="0.1">
+<label>Dribbling (0–10)</label>
+<input type="number" id="drib">
 
-        <label>Ball Control</label>
-        <input type="number" id="bc">
+<label>Heading (0–10)</label>
+<input type="number" id="head">
 
-        <label>Dribbling</label>
-        <input type="number" id="drib">
+<label>Tackle (0–5)</label>
+<input type="number" id="tackle">
 
-        <label>Heading</label>
-        <input type="number" id="head">
-
-        <label>Tackle</label>
-        <input type="number" id="tackle">
-
-        <label>Stamina</label>
-        <input type="number" id="stamina">
-
-        <button onclick="calculate()">Calculate</button>
-
-        <div class="results" id="results" style="display:none;">
-            <h3>Player Stats</h3>
-            <div class="stats">
-                <div>PAC: <span id="pacVal">-</span></div>
-                <div>SHO: <span id="shoVal">-</span></div>
-                <div>DRI: <span id="driVal">-</span></div>
-                <div>DEF: <span id="defVal">-</span></div>
-                <div>PHY: <span id="phyVal">-</span></div>
-            </div>
-            <div class="ovr">OVR: <span id="ovrVal">-</span></div>
-        </div>
-    </div>
-
-    <script src="fut.js"></script>
-    <script>
-        function calculate() {
-            const pos = document.getElementById('pos').value;
-            const acc = parseFloat(document.getElementById('acc').value);
-            const spd = parseFloat(document.getElementById('spd').value);
-            const fin = parseFloat(document.getElementById('fin').value);
-            const lon = parseFloat(document.getElementById('long').value);
-            const voll = parseFloat(document.getElementById('voll').value);
-            const pen = parseFloat(document.getElementById('pen').value);
-            const sp = parseFloat(document.getElementById('sp').value);
-            const ag = parseFloat(document.getElementById('ag').value);
-            const rc = parseFloat(document.getElementById('rc').value);
-            const bc = parseFloat(document.getElementById('bc').value);
-            const drib = parseFloat(document.getElementById('drib').value);
-            const head = parseFloat(document.getElementById('head').value);
-            const tackle = parseFloat(document.getElementById('tackle').value);
-            const stamina = parseFloat(document.getElementById('stamina').value);
-
-            const pac = CalculatePac(acc, spd);
-            const sho = CalculateSho(fin, lon, voll, pen, sp);
-            const dri = CalculateDri(ag, rc, bc, drib);
-            const def = CalculateDef(head, tackle);
-            const phy = CalculatePhy(stamina);
-
-            const ovr = CalculateOVR(pos, pac, sho, dri, 50, def, phy); // pas=50 προσωρινό
-
-            document.getElementById('pacVal').innerText = pac;
-            document.getElementById('shoVal').innerText = sho;
-            document.getElementById('driVal').innerText = dri;
-            document.getElementById('defVal').innerText = def;
-            document.getElementById('phyVal').innerText = phy;
-            document.getElementById('ovrVal').innerText = ovr;
-
-            document.getElementById('results').style.display = 'block';
-        }
-    </script>
-</body>
-</html>
+<label>Stamina (minutes)</label>
+<input type="number" id="stamina">
