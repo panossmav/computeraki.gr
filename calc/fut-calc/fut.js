@@ -92,4 +92,4 @@ function calculate() {
     document.getElementById('ovrVal').innerText = ovr;
 
     document.getElementById('results').style.display = 'block';
-}
+} 
